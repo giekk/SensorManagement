@@ -1,0 +1,6 @@
+temp_01/2021,0001,Temperatura,70,-10,10,0
+hum_11/2022,0002,Umidità,85,60,93,75
+dust_06/2023,0003,Micropolveri,60,13,88,56
+temp_to_test,0004,Temperatura,70,0,0,0
+hum_to_test,0005,Umidità,85,0,0,0
+micro_to_test,0006,Micropolveri,60,0,0,0

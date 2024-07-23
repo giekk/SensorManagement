@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/giekk/Qt/6.7.2/gcc_64/include",
+                "/home/giekk/Qt/6.7.2/gcc_64/include/QtCore",
+                "/home/giekk/Qt/6.7.2/gcc_64/include/QtWidgets",
+                "/home/giekk/Qt/6.7.2/gcc_64/include/QtTest",
+                "/home/giekk/Qt/6.7.2/gcc_64/include/QtGui",
+                "/home/giekk/Qt/Tools/QtDesignStudio/qt6_design_studio_reduced_version/include",
+                "/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+                "/home/giekk/Qt/Tools/QtDesignStudio/qt6_design_studio_reduced_version/include/QtCharts"
+            ],
+            "defines": [],
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerPath": "/usr/bin/g++"
+        }
+    ],
+    "version": 4
+}

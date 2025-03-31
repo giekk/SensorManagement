@@ -9,7 +9,7 @@
 #include <QScreen>
 #include <QGuiApplication>
 
-#include "../sensor.h"
+#include "../model/sensor.h"
 
 class SensorInfo : public QWidget
 {

@@ -1,7 +1,7 @@
 #ifndef HUMIDITYPANEL_H
 #define HUMIDITYPANEL_H
 
-#include "../humidity.h"
+#include "../model/humidity.h"
 #include "sensorInfoDialog.h"
 #include "sensorPanel.h"
 

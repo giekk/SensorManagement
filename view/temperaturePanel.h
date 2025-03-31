@@ -1,7 +1,7 @@
 #ifndef TEMPERATUREPANEL_H
 #define TEMPERATUREPANEL_H
 
-#include "../temperature.h"
+#include "../model/temperature.h"
 #include "sensorInfoDialog.h"
 #include "sensorPanel.h"
 

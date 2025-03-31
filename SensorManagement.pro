@@ -12,11 +12,11 @@ QT += widgets gui core
 QT += charts 
 
 SOURCES += \
-    sensor.cpp \
-    temperature.cpp \
-    humidity.cpp \
-    microdust.cpp \
-    sensorDataVisitor.cpp \
+    model/sensor.cpp \
+    model/temperature.cpp \
+    model/humidity.cpp \
+    model/microdust.cpp \
+    model/sensorDataVisitor.cpp \
     view/sensorInfoVisitor.cpp \
     view/sensorInfo.cpp \
     view/sensorPanel.cpp \
@@ -31,16 +31,16 @@ SOURCES += \
     view/homeView.cpp \
     view/topbar.cpp \
     view/tutorialView.cpp \
-    data.cpp \
-    sensorData.cpp \
-    database.cpp \
-    dataManagement.cpp \
-    dbEditor.cpp \
-    dataChart.cpp \
-    sensorColumn.cpp \
-    setSensorVisitor.cpp \
+    db/data.cpp \
+    db/sensorData.cpp \
+    db/database.cpp \
+    model/dataManagement.cpp \
+    model/dbEditor.cpp \
+    model/dataChart.cpp \
+    model/sensorColumn.cpp \
+    model/setSensorVisitor.cpp \
     view/createSensorPanelVisitor.cpp \
-    sensorFactory.cpp \
+    model/sensorFactory.cpp \
     view/sensorColumnView.cpp \
     view/dataChartView.cpp \
     view/dbEditorView.cpp \
@@ -48,12 +48,12 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
-    IVisitor.h \
-    sensor.h \
-    temperature.h \
-    humidity.h \
-    microdust.h \
-    sensorDataVisitor.h \
+    model/IVisitor.h \
+    model/sensor.h \
+    model/temperature.h \
+    model/humidity.h \
+    model/microdust.h \
+    model/sensorDataVisitor.h \
     view/sensorInfoVisitor.h \
     view/sensorInfo.h \
     view/sensorPanel.h \
@@ -67,16 +67,16 @@ HEADERS += \
     view/homeView.h \
     view/topbar.h \
     view/tutorialView.h \
-    data.h \
-    sensorData.h \
-    database.h \
-    dataManagement.h \
-    dbEditor.h \
-    dataChart.h \
-    sensorColumn.h \
-    setSensorVisitor.h \
+    db/data.h \
+    db/sensorData.h \
+    db/database.h \
+    model/dataManagement.h \
+    model/dbEditor.h \
+    model/dataChart.h \
+    model/sensorColumn.h \
+    model/setSensorVisitor.h \
     view/createSensorPanelVisitor.h \
-    sensorFactory.h \
+    model/sensorFactory.h \
     view/sensorColumnView.h \
     view/dataChartView.h \
     view/dbEditorView.h \

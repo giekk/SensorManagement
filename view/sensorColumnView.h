@@ -15,7 +15,7 @@
 #include <QScrollArea>
 #include <QScrollBar>
 
-#include "../sensorColumn.h"
+#include "../model/sensorColumn.h"
 #include "sensorPanel.h"
 #include "temperaturePanel.h"
 #include "humidityPanel.h"

@@ -1,7 +1,7 @@
 #ifndef CREATESENSORPANELVISITOR_H
 #define CREATESENSORPANELVISITOR_H
 
-#include "IVisitor.h"
+#include "../model/IVisitor.h"
 #include "temperaturePanel.h"
 #include "humidityPanel.h"
 #include "microdustPanel.h"

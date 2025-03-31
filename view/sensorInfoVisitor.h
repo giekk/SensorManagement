@@ -4,9 +4,9 @@
 #include <QLabel>
 
 #include "IVisitor.h"
-#include "../temperature.h"
-#include "../humidity.h"
-#include "../microdust.h"
+#include "../model/temperature.h"
+#include "../model/humidity.h"
+#include "../model/microdust.h"
 
 class SensorInfoVisitor : public IVisitor
 {

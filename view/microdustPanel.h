@@ -1,7 +1,7 @@
 #ifndef MICRODUSTPANEL_H
 #define MICRODUSTPANEL_H
 
-#include "../microdust.h"
+#include "../model/microdust.h"
 #include "sensorInfoDialog.h"
 #include "sensorPanel.h"
 

@@ -24,7 +24,7 @@
 #include "sensorInfoDialog.h"
 #include "buildSensorDialog.h"
 #include "createSensorPanelVisitor.h"
-#include "sensorFactory.h"
+#include "../model/sensorFactory.h"
 
 class SensorColumnView : public QWidget
 {

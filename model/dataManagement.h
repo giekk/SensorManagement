@@ -1,8 +1,8 @@
 #ifndef DATAMANAGEMENT_H
 #define DATAMANAGEMENT_H
 
-#include "data.h"
-#include "database.h"
+#include "../db/data.h"
+#include "../db/database.h"
 #include "sensor.h"
 #include "temperature.h"
 #include "humidity.h"

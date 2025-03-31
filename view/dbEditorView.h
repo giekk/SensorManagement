@@ -9,7 +9,7 @@
 #include <QCalendarWidget>
 #include <QLabel>
 
-#include "dbEditor.h"
+#include "../model/dbEditor.h"
 #include "topbar.h"
 
 class DBEditorView : public QWidget

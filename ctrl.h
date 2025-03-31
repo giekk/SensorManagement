@@ -1,7 +1,7 @@
 #ifndef CTRL_H
 #define CTRL_H
 
-#include "dataManagement.h"
+#include "model/dataManagement.h"
 #include "mainwindow.h"
 
 class MainWindow;

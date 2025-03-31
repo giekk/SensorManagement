@@ -17,7 +17,7 @@
 #include <QFont>
 #include <QColor>
 
-#include "dataChart.h"
+#include "../model/dataChart.h"
 
 #define BUTTON_HEIGHT 25
 #define BUTTON_WIDTH 25

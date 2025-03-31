@@ -1,7 +1,7 @@
 #ifndef SENSORFACTORY_H
 #define SENSORFACTORY_H
 
-#include "sensorData.h"
+#include "../db/sensorData.h"
 #include "sensor.h"
 #include "temperature.h"
 #include "humidity.h"

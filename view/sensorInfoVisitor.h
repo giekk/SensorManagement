@@ -3,7 +3,7 @@
 
 #include <QLabel>
 
-#include "IVisitor.h"
+#include "../model/IVisitor.h"
 #include "../model/temperature.h"
 #include "../model/humidity.h"
 #include "../model/microdust.h"

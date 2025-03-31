@@ -33,3 +33,26 @@
 
 #VSCode settings
 .vscode/
+
+#single files
+Makefile
+SensorManagement
+.qmake.stash
+moc_addSensorDialog.cpp
+moc_buildSensorDialog.cpp
+moc_ctrl.cpp
+moc_dataChartView.cpp
+moc_dbEditorView.cpp
+moc_homeView.cpp
+moc_humidityPanel.cpp
+moc_mainwindow.cpp
+moc_predefs.h
+moc_sensorInfo.cpp
+moc_microdustPanel.cpp
+moc_temperaturePanel.cpp
+moc_sensorColumnView.cpp
+moc_simulationView.cpp
+moc_sensorInfoDialog.cpp
+moc_sensorPanel.cpp
+moc_topbar.cpp
+moc_tutorialView.cpp

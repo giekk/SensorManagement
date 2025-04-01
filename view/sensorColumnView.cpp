@@ -2,6 +2,7 @@
 
 SensorColumnView::SensorColumnView(QWidget* parent) : QWidget(parent)
 {
+    this->setStyleSheet(" background-color:rgb(255, 255, 255); ");
     QVBoxLayout* layout = new QVBoxLayout(this);
     layout->setAlignment(Qt::AlignTop | Qt::AlignLeft);
 
@@ -12,6 +13,7 @@ SensorColumnView::SensorColumnView(QWidget* parent) : QWidget(parent)
     QLabel* titleBar = new QLabel();
     titleBar->setText("Sensori:");
     titleBar->setFont(QFont("Arial", 12, QFont::Bold));
+    titleBar->setStyleSheet(" background-color: #f0f0f0; ");
     QLayout* columnTopBar = this->columnTopBar(add_sensor, save, filterTitle, typeFilter, QPixmap(QCoreApplication::applicationDirPath() + "/img/add_icon.png"), QPixmap(QCoreApplication::applicationDirPath() + "/img/save_icon.png"));
 
     this->sensorColumn = new SensorColumn();
@@ -28,9 +30,21 @@ SensorColumnView::SensorColumnView(QWidget* parent) : QWidget(parent)
         CreateSensorPanelVisitor visitor;
         (*it)->accept(visitor);
         SensorPanel* panel = visitor.getPanel();
+        QFrame* line = new QFrame();
+        line->setFrameShape(QFrame::HLine);
+        line->setFrameShadow(QFrame::Sunken);
+        line->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        line->setStyleSheet(
+            " color: #f0f0f0; "
+            " background-color: #f0f0f0; "
+            " height: 1px; "
+            " border: none; "
+            " opacity: 0.5; "
+        );
         if (panel != nullptr) 
         {
             sensor_layout->addWidget(panel);
+            sensor_layout->addWidget(line);
             connect(panel, &SensorPanel::remove, this, [this, sensorId, panel, sensor_layout](){ this->removeSensor(sensorId, panel, sensor_layout); });
             connect(panel, &SensorPanel::modify, this, [this, sensorId, panel](){ this->modifySensor(sensorId, panel); });
             connect(panel, &SensorPanel::build, this, [this, panel](){ this->buildSensorData(panel); });
@@ -81,6 +95,7 @@ QLayout* SensorColumnView::columnTopBar(QPushButton* button1, QPushButton* butto
     button2->setCursor(Qt::PointingHandCursor);
     button2->setToolTip("Salva");
     filterTitle->setText("Filtra:");
+    filterTitle->setStyleSheet(" background-color: #f0f0f0; ");
     filter->addItem("Tutti");
     filter->addItem("Temperatura");
     filter->addItem("Umidità");
@@ -164,12 +179,24 @@ void SensorColumnView::addSensor(QLayout* sensor_layout)
         CreateSensorPanelVisitor visitor;
         sensor->accept(visitor);
         SensorPanel* panel = visitor.getPanel();
+        QFrame* line = new QFrame();
+        line->setFrameShape(QFrame::HLine);
+        line->setFrameShadow(QFrame::Sunken);
+        line->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        line->setStyleSheet(
+            " color: #f0f0f0; "
+            " background-color: #f0f0f0; "
+            " height: 1px; "
+            " border: none; "
+            " opacity: 0.5; "
+        );
 
         if (sensor != nullptr && panel != nullptr) 
         {
             const std::string& sensorId = sensor->getId();
             this->sensorColumn->addSensor(sensor);
             sensor_layout->addWidget(panel);
+            sensor_layout->addWidget(line);
             connect(panel, &SensorPanel::remove, this, [this, sensorId, panel, sensor_layout](){ this->removeSensor(sensorId, panel, sensor_layout); });
             connect(panel, &SensorPanel::modify, this, [this, sensorId, panel](){ this->modifySensor(sensorId, panel); });
             connect(panel, &SensorPanel::build, this, [this, panel](){ this->buildSensorData(panel); });

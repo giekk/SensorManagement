@@ -30,21 +30,9 @@ SensorColumnView::SensorColumnView(QWidget* parent) : QWidget(parent)
         CreateSensorPanelVisitor visitor;
         (*it)->accept(visitor);
         SensorPanel* panel = visitor.getPanel();
-        QFrame* line = new QFrame();
-        line->setFrameShape(QFrame::HLine);
-        line->setFrameShadow(QFrame::Sunken);
-        line->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-        line->setStyleSheet(
-            " color: #f0f0f0; "
-            " background-color: #f0f0f0; "
-            " height: 1px; "
-            " border: none; "
-            " opacity: 0.5; "
-        );
         if (panel != nullptr) 
         {
             sensor_layout->addWidget(panel);
-            sensor_layout->addWidget(line);
             connect(panel, &SensorPanel::remove, this, [this, sensorId, panel, sensor_layout](){ this->removeSensor(sensorId, panel, sensor_layout); });
             connect(panel, &SensorPanel::modify, this, [this, sensorId, panel](){ this->modifySensor(sensorId, panel); });
             connect(panel, &SensorPanel::build, this, [this, panel](){ this->buildSensorData(panel); });

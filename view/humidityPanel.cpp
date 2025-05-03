@@ -2,7 +2,10 @@
 
 HumidityPanel::HumidityPanel(Sensor& sensor, QWidget* parent) : SensorPanel(parent)
 {
-    QHBoxLayout* layout = new QHBoxLayout(this);
+    QVBoxLayout* mainLayout = new QVBoxLayout(this);
+    mainLayout->setAlignment(Qt::AlignCenter);
+
+    QHBoxLayout* layout = new QHBoxLayout();
     layout->setAlignment(Qt::AlignTop | Qt::AlignLeft);
 
     QPixmap image(QCoreApplication::applicationDirPath() + "/img/humidity.png");   //aggiungo immagine sensore temperatura
@@ -23,7 +26,21 @@ HumidityPanel::HumidityPanel(Sensor& sensor, QWidget* parent) : SensorPanel(pare
     QPushButton* build = new QPushButton();
     QLayout* buttonLayout = this->buttonsLayout(remove, modify, info, build);
 
+    QFrame* line = new QFrame();
+    line->setFrameShape(QFrame::HLine);
+    line->setFrameShadow(QFrame::Sunken);
+    line->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+    line->setStyleSheet(
+        " color: #f0f0f0; "
+        " background-color: #f0f0f0; "
+        " height: 1px; "
+        " border: none; "
+        " opacity: 0.5; "
+    );
+
     layout->addLayout(buttonLayout);
+    mainLayout->addLayout(layout);
+    mainLayout->addWidget(line);
 
     //apro connessione bottoni
     connect(remove, &QPushButton::clicked, this, &SensorPanel::remove);
